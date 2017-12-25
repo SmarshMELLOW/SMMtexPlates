@@ -1,0 +1,143 @@
+\documentclass[12pt,a4paper]{article}
+% Author: Sam Marshall
+% Modified: Dec 25, 2017
+% Note: Some of the macros and formatting ideas have been pulled together from miscellanous threads.
+
+%SMM: People to add to mailing list...
+
+%%% ---------------
+%%% PREAMBLE
+%%% ---------------
+% Define geometry (without using the geometry package)
+\setlength\topmargin{-48pt}
+\setlength\headheight{0pt}
+\setlength\headsep{25pt}
+\setlength\marginparwidth{-20pt}
+\setlength\textwidth{7.0in}
+\setlength\textheight{9.75in}
+\setlength\oddsidemargin{-30pt}
+\setlength\evensidemargin{-30pt}
+
+\frenchspacing						% better looking spacing
+
+% Call packages we'll need
+\usepackage[USenglish]{babel}			% english
+\usepackage{blindtext}
+\usepackage{graphicx}				% images
+\usepackage{caption}
+
+\DeclareCaptionFormat{myformat}{#1#2#3\hrulefill}
+\captionsetup[figure]{format=myformat}
+
+\usepackage{amssymb,amsmath}		% math
+\usepackage{url}					% clickable links
+\usepackage{wrapfig}				% wrapping text around figures
+%\usepackage[T1]{fontenc}			% font encoding
+\usepackage{color} 					% color for greeting
+\usepackage[dvipsnames]{xcolor}
+\definecolor{Dark-Gray}{gray}{0.4}
+\usepackage{times} 				% Times New Roman font for main content
+\usepackage[hyperfigures,hyperfootnotes,colorlinks,linkcolor=blue,urlcolor=blue,citecolor=blue,filecolor=blue]{hyperref}
+\usepackage[bottom]{footmisc}
+%\setlength\footnotemargin{15pt}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\rfoot{\thepage}
+\cfoot{}
+\renewcommand{\headrulewidth}{0.0pt}	% no bar on top of page
+\renewcommand{\footrulewidth}{0.0pt}	% no bar on bottom of page
+
+%%% ---------------
+%%% DEFINITIONS
+%%% ---------------
+
+% Define separators
+\newcommand{\HorRule}[1]{\noindent\rule{\linewidth}{#1}} % Creating a horizontal rule
+\newcommand{\SepRule}{\noindent							 % Creating a separator
+	\begin{center}
+		\rule{250pt}{1pt}
+	\end{center}
+}						
+
+% Define Title
+\newcommand{\JournalName}[1]{%
+	\noindent\HorRule{2pt}
+	\begin{center}	
+		{\fontsize{37pt}{1cm} \textbf{THE SMARSH QUARTERLY}}
+	\end{center}	
+	\noindent\HorRule{2pt}
+	\vspace{0.25cm}
+	\par \normalsize \normalfont}
+
+% define grettings from command		
+\newcommand{\Greetings}[1]{%
+	\noindent {\LARGE \textcolor{OliveGreen}{\textbf{Greetings from #1}}}
+	\vspace{0.25cm} }
+
+% define closing
+\newcommand{\closing}{
+	For further inquiries into any of the above stories or to share highlights from your life, please e-mail me at \href{mailto:samuel.m.marshall.12@dartmouth.edu}{samuel.m.marshall.12@dartmouth.edu}.
+}
+
+% FIGURE DEFINITIONS --------------------------------
+% page 1 figure
+\newcommand{\ponefig}[4]{
+	\begin{figure}[h]
+		\captionsetup{width=#1\textwidth}
+		\centering
+		\includegraphics[width=#1\textwidth]{#2}
+		\caption*{\textcolor{Dark-Gray}{#3 \textit{#4}}}
+	\end{figure}
+}
+
+% page 2 figures
+\newcommand{\ptwofig}[4]{
+	\begin{wrapfigure}{#1}{0.45\textwidth}
+		\captionsetup{width=0.45\textwidth}
+		\begin{center}
+			\includegraphics[width=0.45\textwidth]{#2}
+		\end{center}
+		\caption*{\textcolor{Dark-Gray}{#3 \textit{#4}.}}
+	\end{wrapfigure}
+}
+
+% ISSUE Documentation
+\lhead{ Vol. X Iss. Y}
+\rhead{Month 1, YYYY}
+%%% ---------------
+%%% BEGIN DOCUMENT
+%%% ---------------
+\begin{document}
+	% Title	
+	\JournalName
+	% -----
+	
+	\Greetings{My Current Location}
+	
+	%SMM: Content approx 5 lines 
+	\blindtext
+	% Main page figure
+	\ponefig{0.8}{imagename}{caption}{City, ST} %image width, image name, caption, location ST
+	%SMM: more content
+	\blindtext
+	% \href{http://www.startribune.com/shakeup-at-minneapolis-fed-ousts-two-top-economists/232695051/}{here}). 
+	
+	% content
+	%
+	%\newpage
+	\ptwofig{l}{image2}{caption}{City, ST} %page loation, image name, caption, location ST
+	%
+	\blindtext
+	% content
+	\ptwofig{r}{image3}{caption}{City, ST}
+	
+	% content
+	\blindtext
+	% content 
+	%\newline
+	
+	\closing
+	
+\end{document} 
+

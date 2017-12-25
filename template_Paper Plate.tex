@@ -1,0 +1,95 @@
+% Template for a pretty paper
+% Author: Sam Marshall
+% Modified: 12/25/2017
+\documentclass[12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%
+\usepackage{mypaperstyle}  % need to open this file as well in directory
+%\usepackage{subfiles}
+%\usepackage[subpreambles=false]{standalone}
+%\usepackage{import}
+
+\def \inst {My Employer}  % author affilitaion
+\def \thxppl {Names of People who assisted}
+\def \thxplaces {Places where work was presented}
+
+\title{Title Line 1 \\ Title Line 2\thanks{I am grateful to \thxppl, and seminar participants at \thxplaces for useful suggestions and comments.The views expressed in this paper are those of the author and do not necessarily reflect the position of \inst.} \author{ \href{mailto:samuel.m.marshall.12@dartmouth.edu}{Sam Marshall} \\ \small{\inst}}
+	\date{\footnotesize{\monthyeardate\today}}}
+
+
+% To Do: 1/2/17
+% 1. This is a to-do list
+% 2. 
+% 3. 
+% 4. 
+% 5. 
+% 6.
+
+\begin{document}
+	
+	
+	\maketitle
+	
+	\begin{abstract}
+		\begin{onehalfspace}
+			\noindent
+			\textit{blah blah blah...}
+			
+			\econtags{D1, D91}{Durable goods, time allocation} % these are examples
+			\pagebreak
+		\end{onehalfspace}
+		
+		
+	\end{abstract}
+	
+	\doublespacing
+	
+	
+	\section{Introduction}
+	
+	% \import{Sections/}{Introduction}
+	
+	
+	\section{Motivation}
+	
+	
+	\section{Economic Framework} \label{s:EconomicFramework}
+	
+	
+	\section{Data} \label{s:Data}
+	
+	
+	\section{Estimation}\label{s:Estimation}
+	
+	
+	\section{Results} \label{s:Results}
+	
+	
+	\section{Conclusion} \label{s:Conclusion}
+	
+	
+	
+	%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+	%Bibliography
+	%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+	\newpage
+	\singlespacing
+	%\bibliography{Bibliography~File}
+	
+	
+	%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+	%Appendices
+	%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+	\appendix
+	\newpage
+	
+	\section{Data details}\label{a:data}
+	
+	%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+	%Figures and Tables
+	%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+	\clearpage
+	
+	\section{Figures \& Tables}\label{a:FiguresTables}
+	
+	
+\end{document}

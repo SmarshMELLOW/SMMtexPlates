@@ -1,0 +1,149 @@
+% Author: Sam Marshall
+% Modified: 12/25/2017
+% This document provides the style for the paper plate template
+\ProvidesPackage{mypaperstyle}
+
+%\RequirePackage[l2tabu, orthodox]{nag}     % checks for outdated packages... IDK what this does
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+%SMM: Style packages
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{geometry}
+
+\usepackage{natbib}
+\bibliographystyle{authordate2}
+
+% image packages
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{epsfig}
+
+\usepackage{verbatim}
+\usepackage[outdir=./]{epstopdf}
+\usepackage[onehalfspacing]{setspace}
+\usepackage[bottom]{footmisc}
+\usepackage{fancyhdr}
+\usepackage{rotating}
+\usepackage{pdflscape}
+\usepackage[hyperfigures,hyperfootnotes,colorlinks,linkcolor=MidnightBlue,urlcolor=blue,citecolor=MidnightBlue,filecolor=blue]{hyperref}
+
+% These packages are for tables
+\usepackage{threeparttable}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{siunitx}
+\sisetup{input-symbols = {()},  % do not treat "(" and ")" in any special way
+	group-digits  = false} % no grouping of digits
+
+% package for enumerate
+\usepackage{enumerate}
+\usepackage{enumitem}
+
+\usepackage{times} 				% Times New Roman font for main content
+\usepackage{microtype}          % Makes spacing nicer
+
+\usepackage{cleveref}           % nice references
+\crefname{equation}{equation}{equations}
+\newcommand{\crefrangeconjunction}{--}
+\crefname{subtable}{panel}{panels}%
+\Crefname{subtable}{Panel}{Panels}%
+\crefname{subfigure}{panel}{panels}%
+\Crefname{subfigure}{Panel}{Panels}%
+
+\usepackage[acronym]{glossaries}
+\renewcommand*{\glstextformat}[1]{\textcolor{black}{#1}}
+\glsdisablehyper
+
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{pbox}
+\usepackage{xfrac}
+\doublespacing
+
+\makeglossaries
+% Make acronyms for use in text. ex:
+\newacronym{cps}{CPS}{Current Population Survey}
+\newacronym{nipa}{NIPA}{National Income and Product Account}
+\newacronym{cpi}{CPI}{Consumer Price Index}
+\newacronym{bea}{BEA}{Bureau of Economic Analysis}
+\newacronym{pce}{PCE}{Personal Consumption Expenditure}
+\newacronym{atus}{ATUS}{American Time Use Survey}
+\newacronym{cex}{CEX}{Consumer Expenditure Survey}
+\newacronym{bls}{BLS}{Bureau of Labor Statistics}
+\newacronym{ces}{CES}{Constant Elasticity of Substitution}
+\newacronym{ies}{IES}{Intertemporal Elasticity of Substitution}
+\newacronym{psid}{PSID}{Panel Study of Income Dynamics}
+\newacronym{rbc}{RBC}{Real Business Cycles}
+\newacronym{ra}{RA}{Representative Agent}
+\newacronym{aids}{AIDS}{Almost Ideal Demand System}
+\newacronym{laaids}{LA/AIDS}{Linear Approximation Almost Ideal Demand System}
+\newacronym{fdaids}{FD-LA/AIDS}{First Differences LA/AIDS}
+\newacronym{ucc}{UCC}{Universal Classification Code}
+\newacronym{foc}{FOC}{First Order Condition}
+\newacronym{ols}{OLS}{Ordinary Least Squares}
+\newacronym{sols}{SOLS}{System Ordinary Least Squares}
+\newacronym{fff}{FFF}{Flexible Functional Form}
+
+
+\def \baselinestretch{1.33}
+\geometry{left=0.93in,right=0.93in,bottom=0.93in,top=0.93in}
+
+\usepackage{amsthm}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+
+\theoremstyle{definition}
+\newtheorem*{HomeWork}{Home Work}
+\newtheorem*{Leisure}{Leisure}
+\newtheorem*{Work}{Market Work}
+
+\graphicspath{{./Figures/}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Marshall}
+\lhead{Document Title}
+\rfoot{Page \thepage}
+
+\usepackage{datetime}
+
+\newdateformat{monthyeardate}{%
+	\monthname[\THEMONTH], \THEYEAR}
+
+\newcommand{\myfeedback}[2]{
+	I am grateful to {#1}, and seminar participants at {#2} for useful suggestions and comments.The views expressed in this paper are those of the author and do not necessarily reflect the position of My employer.
+}
+
+\newcommand{\econtags}[2]{
+	\noindent
+	\emph{JEL classification codes:} {#1}. %https://www.aeaweb.org/jel/guide/jel.php
+	\medskip
+	\\ \noindent
+	\emph{Keywords:} {#2}.
+}
+
